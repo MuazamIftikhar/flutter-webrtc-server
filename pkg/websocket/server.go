@@ -21,7 +21,10 @@ type WebSocketServerConfig struct {
 func DefaultConfig() WebSocketServerConfig {
 	return WebSocketServerConfig{
 		Host:           "0.0.0.0",
-		Port:           8086,
+			port, err := os.Getenv("PORT")
+    if err != nil {
+        port = "3000"
+    }
 		HTMLRoot:       "web",
 		WebSocketPath:  "/ws",
 		TurnServerPath: "/api/turn",

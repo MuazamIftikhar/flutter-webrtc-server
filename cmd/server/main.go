@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-
+	 port := os.Getenv("PORT")
 	cfg, err := ini.Load("configs/config.ini")
 	if err != nil {
 		logger.Errorf("Fail to read file: %v", err)

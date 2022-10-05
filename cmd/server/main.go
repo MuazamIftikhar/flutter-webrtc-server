@@ -38,10 +38,10 @@ func main() {
 	sslKey := cfg.Section("general").Key("key").String()
 	bindAddress := cfg.Section("general").Key("bind").String()
 
-	port, err := cfg.Section("general").Key("port").Int()
-	if err != nil {
-		port = 8086
-	}
+	port, err := os.Getenv("PORT")
+    if err != nil {
+        port = "3000"
+    } 
 
 	htmlRoot := cfg.Section("general").Key("html_root").String()
 

@@ -1,6 +1,6 @@
 module github.com/flutter-webrtc/flutter-webrtc-server
 
-go 1.17
+go 1.12
 
 require (
 	github.com/chuckpreslar/emission v0.0.0-20170206194824-a7ddd980baf9

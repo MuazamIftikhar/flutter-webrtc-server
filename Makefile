@@ -12,8 +12,8 @@ upx:
 	upx -9 bin/*
 
 linux:
-	CGO_ENABLE=0 GOOS=linux GOARCH=amd64 go build -o bin/server-linux-amd64 ${LDFLAGS} cmd/server/main.go
-	CGO_ENABLE=0 GOOS=linux GOARCH=386 go build -o bin/server-linux-i386 ${LDFLAGS} cmd/server/main.go
+	CGO_ENABLE=0 GOOS=linux GOARCH=amd64 go build -o bin/server-linux-amd64 ${LDFLAGS} bin/server/main.go
+	CGO_ENABLE=0 GOOS=linux GOARCH=386 go build -o bin/server-linux-i386 ${LDFLAGS} bin/server/main.go
 
 darwin:
 	CGO_ENABLE=0 GOOS=darwin GOARCH=amd64 go build -o bin/server-darwin-amd64 ${LDFLAGS} cmd/server/main.go
